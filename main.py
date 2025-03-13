@@ -115,7 +115,7 @@ def app():
         with st.expander('Image set 1'):
             set_len = len(image_set_1)
             if set_len > 1:
-                idx = st.slider('Image index:', min_value=0, max_value=set_len - 1)
+                idx = st.slider('Image index:', min_value=0, max_value=set_len - 1, key="slider1")
             else:
                 idx = 0
             st.image(raw_bytes_1[idx], caption=f'{label_decode[labels_1[idx]]}')
@@ -123,7 +123,7 @@ def app():
         with st.expander('Image set 2'):
             set_len = len(image_set_2)
             if set_len > 1:
-                idx = st.slider('Image index:', min_value=0, max_value=set_len - 1)
+                idx = st.slider('Image index:', min_value=0, max_value=set_len - 1, key="slider2")
             else:
                 idx = 0
             st.image(raw_bytes_2[idx], caption=f'{label_decode[labels_2[idx]]}')
